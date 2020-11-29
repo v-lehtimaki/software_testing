@@ -1,4 +1,6 @@
-import { add } from '../Material/src/add';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+import add from '../Material/src/add.js';
 const assert = require('chai').assert;
 
 
