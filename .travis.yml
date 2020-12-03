@@ -2,12 +2,7 @@ language: node_js
 node_js: 
     - 12
 install: npm install
-<<<<<<< HEAD
 script: npm test
 after_success: 
     - npm run coverage
     - npm run coveralls
-=======
-script: npm run test
-after_success: npm run coverage
->>>>>>> 662b8723db47107514f80412237f935fd6db87ae
