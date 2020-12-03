@@ -1,7 +1,8 @@
 language: node_js
 node_js: 
     - 'stable'
-os: osx
 install: npm install
-script: npm test
-after_success: npm run coverage
+script: npm run test
+after_success: 
+    - npm run coverage
+    - npm run coveralls
