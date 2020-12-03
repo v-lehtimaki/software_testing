@@ -1,15 +1,25 @@
-import add from '../Material/src/add.js';
 import chai from 'chai';
+import add from '../course_code/src/add.js';
 
-var assert = chai.assert;
+const expect = chai.expect;
 
-describe('Adding two integers together with add-function', () => {
-    it('Add-function should return 23', () => {
-        assert.equal(add(12, 13), 25);
+describe('Add-function', function () {
+    it('Should add two integers successfully', () => {
+        expect(add(12, 13)).to.equal(25);
     });
-    it('Add-function should return 0', () => {
-        assert.equal(add(-1, 1), 0);
+    
+    it('Should add a postiive and a negative integer together successfully', () => {
+        expect(add(-5, 7)).to.equal(2);
+        expect(add(-15, 13)).to.equal(-2);
+    });
+
+    it('Should add two negative integers together successfully', () => {
+        expect(add(-5, -7)).to.equal(-12);
+    });
+
+    it('Should handle the addition of two invalid inputs without throwing', () => {
+        expect(add("hello", [])).to.not.throw;
+        expect(add({}, ["hi"])).to.not.throw;
+        expect(add({test: 1}, [3])).to.not.throw;
     });
 });
-
-
