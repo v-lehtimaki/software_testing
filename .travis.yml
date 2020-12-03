@@ -2,9 +2,14 @@ language: node_js
 node_js: 
     - 12
 install: npm install
+<<<<<<< HEAD
 script: npm test
 after_script:
     - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 after_success: 
     - npm run coverage
     - npm run coveralls
+=======
+script: npm run test
+after_success: npm run coverage
+>>>>>>> 72c2bf507453266ddbb0dbe113efae23d8f1fef9
