@@ -18,8 +18,8 @@ describe('Add-function', function () {
     });
 
     it('Should handle the addition of two invalid inputs without throwing', () => {
-        expect(add("hello", [])).to.not.throw;
-        expect(add({}, ["hi"])).to.not.throw;
-        expect(add({test: 1}, [3])).to.not.throw;
+        expect(add.bind("hello", [])).to.not.throw();
+        expect(add.bind({}, ["hi"])).to.not.throw();
+        expect(add.bind({test: 1}, [3])).to.not.throw();
     });
 });
