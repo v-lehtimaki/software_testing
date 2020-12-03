@@ -4,4 +4,6 @@ node_js:
 os: osx
 install: npm install
 script: npm test
-after_success: npm run coverage
+after_success: 
+    - npm run coverage
+    - npm run coveralls
