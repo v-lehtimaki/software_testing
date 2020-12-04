@@ -3,7 +3,7 @@ import camelCase from '../course_code/src/camelCase';
 
 const expect = chai.expect;
 
-describe('camelCase-function', () => {
+/*describe('camelCase-function', () => {
     test('Should camelify strings with only letters successfully', () => {
         expect(camelCase('Hello world')).to.equal('helloWorld');
         expect(camelCase('this iS a TEST senTEnce')).to.equal('thisIsATestSentence');
@@ -21,4 +21,4 @@ describe('camelCase-function', () => {
     test('Should camelify strings with symbols successfully', () => {
         expect(camelCase('.-!Hello!  !   !WO??RLD?,')).to.equal('helloWoRld');
     });
-});
+});*/
