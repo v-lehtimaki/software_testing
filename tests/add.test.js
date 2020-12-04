@@ -21,5 +21,7 @@ describe('Add-function', () => {
         expect(add.bind('hello', [])).to.not.throw();
         expect(add.bind({}, ['hi'])).to.not.throw();
         expect(add.bind({ test: 1 }, [3])).to.not.throw();
+        expect(add.bind(undefined, 2)).to.not.throw();
+        expect(add.bind(null, 3)).to.not.throw();
     });
 });

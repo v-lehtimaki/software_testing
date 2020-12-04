@@ -21,4 +21,11 @@ describe('camelCase-function', () => {
     test('Should camelify strings with symbols successfully', () => {
         expect(camelCase('.-!Hello!  !   !WO??RLD?,')).to.equal('helloWoRld');
     });
+
+    test('Should handle invalid parameters without crashing', () => {
+        expect(camelCase.bind(123)).to.not.throw();
+        expect(camelCase.bind(null)).to.not.throw();
+        expect(camelCase.bind(undefined)).to.not.throw();
+        expect(camelCase.bind(['Hello', 'World'])).to.not.throw();
+    });
 });
