@@ -4,8 +4,11 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "jest",
-        "coverage": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
+        "test": "jest --coverage",
+        "coverage": "cat ./coverage/lcov.info | coveralls"
+    },
+    "jest": {
+        "collectCoverageFrom": ["course_code/src/*.js"]
     },
     "author": "",
     "license": "ISC",
