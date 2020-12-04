@@ -10,11 +10,11 @@ describe('compact-function', () => {
         expect(compact([null])).to.equal([]);
     });
 
-    test('Should handle invalid parameters without crashing', () => {
-        expect(compact.bind(null)).to.not.throw();
-        expect(compact.bind(undefined)).to.not.throw();
-        expect(compact.bind('Test')).to.not.throw();
-        expect(compact.bind(3)).to.not.throw();
-        expect(compact.bind({ a: 'Test', b: 1 })).to.not.throw();
+    test('Should handle invalid parameters by throwing', () => {
+        expect(compact.bind(null)).to.throw();
+        expect(compact.bind(undefined)).to.throw();
+        expect(compact.bind('Test')).to.throw();
+        expect(compact.bind(3)).to.throw();
+        expect(compact.bind({ a: 'Test', b: 1 })).to.throw();
     });
 });

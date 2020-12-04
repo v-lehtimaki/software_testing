@@ -22,7 +22,7 @@ describe('camelCase-function', () => {
         expect(camelCase('.-!Hello!  !   !WO??RLD?,')).to.equal('helloWoRld');
     });
 
-    test('Should handle invalid parameters without crashing', () => {
+    test('Should handle invalid parameters without throwing', () => {
         expect(camelCase.bind(123)).to.not.throw();
         expect(camelCase.bind(null)).to.not.throw();
         expect(camelCase.bind(undefined)).to.not.throw();

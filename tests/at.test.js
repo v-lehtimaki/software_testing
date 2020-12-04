@@ -42,7 +42,7 @@ describe('At-function', () => {
         expect(at(object, ['d', 'c[0]'])).to.eql([undefined, undefined]);
     });
 
-    test('Should handle invalid parameters without crashing', () => {
+    test('Should handle invalid parameters without throwing', () => {
         expect(at.bind(1, 'Test')).to.not.throw();
         expect(at.bind('Hello', 2)).to.not.throw();
         expect(at.bind(null, 'a')).to.not.throw();

@@ -14,7 +14,7 @@ describe('capitalize-function', () => {
         expect(capitalize("'hello")).to.equal("'hello");
     });
 
-    test('Should handle invalid parameters without crashing', () => {
+    test('Should handle invalid parameters without throwing', () => {
         expect(capitalize.bind(123)).to.not.throw();
         expect(capitalize.bind(['Hello'])).to.not.throw();
         expect(capitalize.bind(null)).to.not.throw();

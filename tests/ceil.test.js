@@ -18,7 +18,7 @@ describe('ceil-function', () => {
         expect(ceil(-0)).to.equal(0);
     });
 
-    test('Should handle invalid parameters without crashing', () => {
+    test('Should handle invalid parameters without throwing', () => {
         expect(ceil.bind('Hello')).to.not.throw();
         expect(ceil.bind([123])).to.not.throw();
         expect(ceil.bind(null)).to.not.throw();

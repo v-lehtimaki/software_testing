@@ -11,23 +11,23 @@ describe('countBy-function', () => {
             { isTrue: false, name: 'Hello' },
             { isTrue: null, name: 'Hello' },
         ];
-        expect(countBy(array, value => value.isTrue)).to.equal({ true: 1, false: 3 });
+        expect(countBy(array, value => value.isTrue)).to.equal({ true: 1, false: 2, null: 1 });
     });
 
     test('Should count irregular arrays successfully', () => {
         const array = [
-            { isTrue: false, name: 'Hello' },
+            { isTrue: 'a', name: 'Hello' },
             3,
             [
-                { isTrue: false, name: 'Hello' },
-                { isTrue: false, name: 'Hello' },
+                { isTrue: 'b', name: 'Hello' },
+                { isTrue: 'a', name: 'Hello' },
             ],
-            { isTrue: true, name: 'Hello' },
-            { isTrue: true, name: 'Hello' },
+            { isTrue: 'b', name: 'Hello' },
+            { isTrue: 'a', name: 'Hello' },
             null,
             { name: 'Hello' },
         ];
-        expect(countBy(array, value => value.isTrue)).to.equal({ true: 2, false: 5 });
+        expect(countBy(array, value => value?.isTrue)).to.equal({ a: 2, b: 1, undefined: 4 });
     });
 
     test('Should count arrays with nested objects successfully', () => {
@@ -40,14 +40,17 @@ describe('countBy-function', () => {
             { isTrue: null, name: 'Hello' },
             { isTrue: { yes: true }, name: 'Hello' },
         ];
-        expect(countBy(array, value => value.isTrue.yes)).to.equal({ true: 2, false: 5 });
+        expect(countBy(array, value => value?.isTrue?.yes)).to.equal({ true: 2, false: 1, undefined: 4 });
     });
 
-    test('Should handle invalid parameters without crashing', () => {
+    test('Should handle invalid arrays without throwing', () => {
         expect(countBy.bind('Test', () => true)).to.not.throw();
         expect(countBy.bind(null, () => true)).to.not.throw();
         expect(countBy.bind(undefined, () => true)).to.not.throw();
-        expect(countBy.bind([{ isTrue: true }, { isTrue: true }], 'a')).to.not.throw();
-        expect(countBy.bind([{ isTrue: true }, { isTrue: true }], null)).to.not.throw();
+    });
+
+    test('Should handle invalid iteratee function by throwing', () => {
+        expect(countBy.bind([{ isTrue: true }, { isTrue: true }], 'a')).to.throw();
+        expect(countBy.bind([{ isTrue: true }, { isTrue: true }], null)).to.throw();
     });
 });

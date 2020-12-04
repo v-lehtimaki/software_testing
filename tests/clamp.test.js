@@ -10,16 +10,16 @@ describe('clamp-function', () => {
         expect(clamp(5.5, -5, 5.5)).to.equal(5.5);
     });
 
-    test('Should clamp numbers successfully within the range', () => {
+    test('Should clamp numbers successfully outside the range', () => {
         expect(clamp(-9.5, -5, 5.5)).to.equal(-5);
         expect(clamp(10, -5, 5.5)).to.equal(5.5);
     });
 
-    test('Should handle invalid range without crashing', () => {
+    test('Should handle invalid range without throwing', () => {
         expect(clamp.bind(5, 2, -2)).to.not.throw();
     });
 
-    test('Should handle invalid parameters without crashing', () => {
+    test('Should handle invalid parameters without throwing', () => {
         expect(clamp.bind('Test', -2, 2)).to.not.throw();
         expect(clamp.bind(3, [2], 2)).to.not.throw();
         expect(clamp.bind(-4, -2, null)).to.not.throw();

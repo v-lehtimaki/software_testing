@@ -16,12 +16,12 @@ describe('chunk-function', () => {
         expect(chunk([1, 2, 3, 4, 5], 6)).to.equal([[1, 2, 3, 4, 5]]);
     });
 
-    test('Should handle bad chunk sizes without crashing', () => {
+    test('Should handle bad chunk sizes without throwing', () => {
         expect(chunk.bind([1, 2, 3, 4, 5], 0)).to.not.throw();
         expect(chunk.bind([1, 2, 3, 4, 5], -2)).to.not.throw();
     });
 
-    test('Should handle invalid parameters without crashing', () => {
+    test('Should handle invalid parameters without throwing', () => {
         expect(chunk.bind({ a: 'Test', b: 3 }, 0)).to.not.throw();
         expect(chunk.bind([1, 2, 3, 4, 5], 'Hello')).to.not.throw();
         expect(chunk.bind([1, 2, 3, 4, 5], null)).to.not.throw();
