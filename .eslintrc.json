@@ -2,7 +2,7 @@
     "env": {
         "node": true,
         "es2020": true,
-        "mocha": true
+        "jest/globals": true
     },
     "extends": [
         "airbnb-base",
@@ -14,7 +14,8 @@
         "impliedStrict": true
     },
     "plugins": [
-        "prettier"
+        "prettier",
+        "jest"
     ],
     "rules": {
         "prefer-destructuring": "off",

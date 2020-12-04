@@ -1,4 +1,0 @@
-{
-    "all": true,
-    "include": ["course_code/src/*.js"]
-}
