@@ -19,6 +19,7 @@ describe('endsWith-function', () => {
         expect(endsWith('Hello', 'Hello', 7)).to.equal(true);
         expect(endsWith('Hello', 'll', 3)).to.equal(false);
         expect(endsWith('', '', 0)).to.equal(true);
+        expect(endsWith('Hello', 'H', -10)).to.equal(false);
     });
 
     test('Should not throw with invalid parameters', () => {
@@ -26,6 +27,7 @@ describe('endsWith-function', () => {
         expect(endsWith.bind(3, 'Hello')).to.throw();
         expect(endsWith.bind(null, 'Hello')).to.throw();
         expect(endsWith.bind('Hello', 'llo', null)).to.throw();
+        expect(endsWith.bind('Hello', 'llo', NaN)).to.throw();
         expect(endsWith.bind('Hello', 'llo', 'Test')).to.throw();
     });
 });

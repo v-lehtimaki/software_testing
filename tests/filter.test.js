@@ -23,4 +23,14 @@ describe('filter-function', () => {
             3,
         ]);
     });
+
+    test('Should not throw with invalid parameters', () => {
+        expect(filter.bind([1, 2, 3], 'Hello')).to.throw();
+        expect(filter.bind([1, 2, 3], null)).to.throw();
+        expect(filter.bind([1, 2, 3], undefined)).to.throw();
+        expect(filter.bind('Test', Boolean)).to.throw();
+        expect(filter.bind(3, Boolean)).to.throw();
+        expect(filter.bind(null, Boolean)).to.throw();
+        expect(filter.bind(undefined, Boolean)).to.throw();
+    });
 });

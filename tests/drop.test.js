@@ -16,9 +16,10 @@ describe('drop-function', () => {
         expect(drop([], 5)).to.eql([]);
     });
 
-    test('Shouldnot throw with invalid parameters', () => {
+    test('Should not throw with invalid parameters', () => {
         expect(drop.bind([1, 2, 3], -5)).to.not.throw();
         expect(drop.bind([1, 2, 3], 'Hello')).to.not.throw();
+        expect(drop.bind(null, 3)).to.not.throw();
         expect(drop.bind({ a: 3, b: 'Test' }, -5)).to.not.throw();
         expect(drop.bind([1, 2], null)).to.not.throw();
         expect(drop.bind(undefined, 3)).to.not.throw();
