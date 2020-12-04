@@ -4,10 +4,15 @@ import clamp from '../course_code/src/clamp';
 const expect = chai.expect;
 
 describe('clamp-function', () => {
-    test('Should clamp numbers successfully within and outside of the range', () => {
+    test('Should clamp numbers successfully within the range', () => {
+        expect(clamp(2.2, -5, 5.5)).to.equal(2.2);
+        expect(clamp(-5, -5, 5.5)).to.equal(-5);
+        expect(clamp(5.5, -5, 5.5)).to.equal(5.5);
+    });
+
+    test('Should clamp numbers successfully within the range', () => {
         expect(clamp(-9.5, -5, 5.5)).to.equal(-5);
         expect(clamp(10, -5, 5.5)).to.equal(5.5);
-        expect(clamp(2.2, -5, 5.5)).to.equal(2.2);
     });
 
     test('Should handle invalid range without crashing', () => {
