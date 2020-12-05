@@ -18,4 +18,12 @@ describe('Words-function', () => {
     test('Should reject the capitalized letters.', () => {
         expect(words('TODAY IS A cold DAY'),'[a-z]+'.to.equal(['cold']));
     });
+
+    test('Should handle invalid parameters without throwing an error', () => {
+        expect(words.bind(null)).to.not.throw();
+        expect(words.bind(undefined)).to.not.throw();
+        expect(words.bind(123)).to.not.throw();
+        expect(words.bind('')).to.not.throw();
+        expect(words.bind([])).to.not.throw();
+    });
 });
