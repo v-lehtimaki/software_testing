@@ -23,22 +23,6 @@ describe('isTypedArray-function', () => {
         expect(isTypedArray([1, 2])).to.equal(false);
         expect(isTypedArray(new String('Hello'))).to.equal(false);
         expect(isTypedArray(new RegExp('Hi'))).to.equal(false);
-        expect(isTypedArray(Symbol("Test"))).to.equal(false);
+        expect(isTypedArray(Symbol('Test'))).to.equal(false);
     });
 });
-
-/**
- * Checks if `value` is classified as a typed array.
- *
- * @since 3.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
- * @example
- *
- * isTypedArray(new Uint8Array)
- * // => true
- *
- * isTypedArray([])
- * // => false
- */

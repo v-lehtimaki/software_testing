@@ -6,7 +6,7 @@ const expect = chai.expect;
 
 describe('isSymbol-function', () => {
     test('Should correctly identify a symbol', () => {
-        expect(isSymbol(Symbol("Test"))).to.equal(true);
+        expect(isSymbol(Symbol('Test'))).to.equal(true);
     });
 
     test('Should identify non-symbol things', () => {
