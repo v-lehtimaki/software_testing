@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "jest --coverage",
-        "test_no_coverage": "jest",
+        "test": "jest --coverage --verbose",
+        "test_no_coverage": "jest --verbose",
         "coverage": "cat ./coverage/lcov.info | coveralls"
     },
     "jest": {
