@@ -17,7 +17,6 @@ describe('capitalize-function', () => {
         expect(toString.bind({ 1 : 'hello' })).to.not.throw();
         expect(toString.bind(\n)).to.not.throw();
         expect(toString.bind([])).to.not.throw();
-        expect(toString.bind(?%€€##""","!)).to.not.throw();
         expect(toString.bind(-Infinity)).to.not.throw();
         expect(toString.bind(Infinity)).to.not.throw();
     });
