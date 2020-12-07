@@ -3,7 +3,7 @@ import upperFirst from '../course_code/src/upperFirst';
 
 const expect = chai.expect;
 
-describe('capitalize-function', () => {
+describe('upperFirst-function', () => {
     test('Should capitalize the first letter of the word', () => {
         expect(upperFirst('hello')).to.equal('Hello');
         expect(upperFirst('Hello')).to.equal('Hello');

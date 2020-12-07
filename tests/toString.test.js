@@ -3,7 +3,7 @@ import toString from '../course_code/src/toString';
 
 const expect = chai.expect;
 
-describe('capitalize-function', () => {
+describe('toString-function', () => {
     test('Should convert the value to a string', () => {
         expect(toString(123456)).to.equal('123456');
         expect(toString('')).to.equal(null);

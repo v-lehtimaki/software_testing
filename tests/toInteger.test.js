@@ -4,7 +4,7 @@ import toInteger from '../course_code/src/toInteger';
 const expect = chai.expect;
 
 
-describe('ceil-function', () => {
+describe('toInteger-function', () => {
     test('Should convert the value to an integer', () => {
         expect(toInteger(10500)).to.equal(10500);
         expect(toInteger(3.101)).to.equal(3.101);

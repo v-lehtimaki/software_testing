@@ -4,7 +4,7 @@ import toNumber from '../course_code/src/toNumber';
 const expect = chai.expect;
 
 
-describe('ceil-function', () => {
+describe('toNumber-function', () => {
     test('Should convert the value to a number', () => {
         expect(toNumber(10500)).to.equal(10500);
         expect(toNumber(3.101)).to.equal(3.101);
