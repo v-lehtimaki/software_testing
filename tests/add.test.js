@@ -17,7 +17,11 @@ describe('Add-function', () => {
         expect(add(-5, -7)).to.equal(-12);
     });
 
-    test('Should handle the addition of two invalid inputs without throwing', () => {
+    test('Should add doubles together successfully', () => {
+        expect(add(-2.3, 4.8)).to.equal(2.5);
+    });
+
+    test('Should handle invalid inputs without throwing', () => {
         expect(() => add('hello', [])).to.not.throw();
         expect(() => add({}, ['hi'])).to.not.throw();
         expect(() => add({ test: 1 }, [3])).to.not.throw();

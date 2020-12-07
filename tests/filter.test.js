@@ -25,12 +25,12 @@ describe('filter-function', () => {
     });
 
     test('Should not throw with invalid parameters', () => {
-        expect(() => filter(null, Boolean)).to.throw();
-        expect(() => filter([1, 2, 3], 'Hello')).to.throw();
-        expect(() => filter([1, 2, 3], null)).to.throw();
-        expect(() => filter([1, 2, 3], undefined)).to.throw();
-        expect(() => filter('Test', Boolean)).to.throw();
-        expect(() => filter(3, Boolean)).to.throw();
-        expect(() => filter(undefined, Boolean)).to.throw();
+        expect(() => filter(null, Boolean)).to.not.throw();
+        expect(() => filter([1, 2, 3], 'Hello')).to.not.throw();
+        expect(() => filter([1, 2, 3], null)).to.not.throw();
+        expect(() => filter([1, 2, 3], undefined)).to.not.throw();
+        expect(() => filter('Test', Boolean)).to.not.throw();
+        expect(() => filter(3, Boolean)).to.not.throw();
+        expect(() => filter(undefined, Boolean)).to.not.throw();
     });
 });

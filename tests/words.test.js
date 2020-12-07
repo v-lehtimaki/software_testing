@@ -16,7 +16,7 @@ describe('words-function', () => {
         expect(words('')).to.eql([]);
     });
 
-    test('Should reject the capitalized letters.', () => {
+    test('Should use custom pattern', () => {
         expect(words('TODAY IS A cold DAY', '[a-z]+')).to.eql(['cold']);
     });
 

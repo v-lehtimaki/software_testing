@@ -18,9 +18,9 @@ describe('upperFirst-function', () => {
     });
 
     test('Should handle invalid parameters without throwing', () => {
-        expect(() => upperFirst(123)).to.not.throw();
-        expect(() => upperFirst(['Hello'])).to.not.throw();
-        expect(() => upperFirst(null)).to.not.throw();
-        expect(() => upperFirst(undefined)).to.not.throw();
+        expect(() => upperFirst(123)).to.throw();
+        expect(() => upperFirst(null)).to.throw();
+        expect(() => upperFirst(undefined)).to.throw();
+        expect(() => upperFirst(['Hello'])).to.throw();
     });
 });

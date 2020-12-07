@@ -4,7 +4,7 @@ import toInteger from '../course_code/src/toInteger';
 const expect = chai.expect;
 
 describe('toInteger-function', () => {
-    test('Should convert the all kinds of numbers to an integer', () => {
+    test('Should convert all kinds of numbers to an integer', () => {
         expect(Number.isInteger(toInteger(10))).to.equal(true);
         expect(Number.isInteger(toInteger(5.521))).to.equal(true);
         expect(Number.isInteger(toInteger(0))).to.equal(true);

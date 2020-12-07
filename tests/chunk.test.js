@@ -5,7 +5,7 @@ const expect = chai.expect;
 
 describe('chunk-function', () => {
     test('Should chunk arrays successfully with default value', () => {
-        expect(chunk(['a', 'b', 'c', 'd'])).to.equal([['a', 'b', 'c', 'd']]);
+        expect(chunk(['a', 'b', 'c', 'd'])).to.equal([['a'], ['b'], ['c'], ['d']]);
     });
 
     test('Should chunk arrays successfully', () => {

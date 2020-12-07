@@ -18,12 +18,12 @@ describe('defaultToAny-function', () => {
     });
 
     test('Should return first acceptable default value when falsy', () => {
-        expect(defaultToAny(NaN, null, 'Test')).to.equal('Test');
-        expect(defaultToAny(null, NaN, undefined, 30, null, 20)).to.equal(30);
+        expect(defaultToAny(undefined, null, 'Test')).to.equal('Test');
+        expect(defaultToAny(null, undefined, 30, null, 20)).to.equal(30);
     });
 
     test('Should return last default value when everything is falsy', () => {
-        expect(defaultToAny(undefined, NaN, null)).to.equal(null);
-        expect(defaultToAny(null, NaN, null, undefined)).to.equal(undefined);
+        expect(defaultToAny(undefined, undefined, null)).to.equal(null);
+        expect(defaultToAny(null, null, undefined)).to.equal(undefined);
     });
 });
