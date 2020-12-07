@@ -4,11 +4,7 @@ import toString from '../course_code/src/toString';
 const expect = chai.expect;
 
 describe('toString-function', () => {
-<<<<<<< HEAD
-    test('Should convert the value to a string', () => {
-=======
     test('Should convert simple things to a string', () => {
->>>>>>> 2a522f6fb753e4d53da8ca1e5e2ba653399ec1bb
         expect(toString(123456)).to.equal('123456');
         expect(toString([1, 2])).to.equal('1,2');
         expect(toString(Symbol('Hello'))).to.equal('Symbol(Hello)');
