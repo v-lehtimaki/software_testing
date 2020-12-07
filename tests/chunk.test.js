@@ -17,8 +17,8 @@ describe('chunk-function', () => {
     });
 
     test('Should handle bad chunk sizes without throwing', () => {
-        expect(chunk.bind([1, 2, 3, 4, 5], 0)).to.not.throw();
-        expect(chunk.bind([1, 2, 3, 4, 5], -2)).to.not.throw();
+        expect(() => chunk([1, 2, 3, 4, 5], 0)).to.not.throw();
+        expect(() => chunk([1, 2, 3, 4, 5], -2)).to.not.throw();
     });
 
     test('Should handle invalid parameters without throwing', () => {

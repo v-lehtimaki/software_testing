@@ -25,7 +25,7 @@ describe('clamp-function', () => {
     });
 
     test('Should handle invalid ranges without throwing', () => {
-        expect(clamp.bind(5, 2, -2)).to.not.throw();
+        expect(() => clamp(5, 2, -2)).to.not.throw();
     });
 
     describe('Should handle invalid parameters in a consistent way', () => {
