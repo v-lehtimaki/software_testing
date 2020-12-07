@@ -19,11 +19,11 @@ describe('toFinite-function', () => {
     })
 
     test('Should handle invalid parameters without throwing', () => {
-        expect(toFinite.bind('Hello')).to.not.throw();
-        expect(toFinite.bind([123])).to.not.throw();
-        expect(toFinite.bind({ 1: 234 })).to.not.throw();
-        expect(toFinite.bind(NaN)).to.not.throw();
-        expect(toFinite.bind(null)).to.not.throw();
-        expect(toFinite.bind(undefined)).to.not.throw();
+        expect(() => toFinite('Hello')).to.not.throw();
+        expect(() => toFinite([123])).to.not.throw();
+        expect(() => toFinite({ 1: 234 })).to.not.throw();
+        expect(() => toFinite(NaN)).to.not.throw();
+        expect(() => toFinite(null)).to.not.throw();
+        expect(() => toFinite(undefined)).to.not.throw();
     });
 });

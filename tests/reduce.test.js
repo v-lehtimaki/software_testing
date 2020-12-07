@@ -54,13 +54,13 @@ describe('reduce-function', () => {
     });
 
     test('Should not throw with invalid parameters', () => {
-        expect(reduce.bind('Hello', Boolean)).to.not.throw();
-        expect(reduce.bind(13, Boolean)).to.not.throw();
-        expect(reduce.bind(null, Boolean)).to.not.throw();
-        expect(reduce.bind(undefined, Boolean)).to.not.throw();
-        expect(reduce.bind([1], null)).to.not.throw();
-        expect(reduce.bind([1], undefined)).to.not.throw();
-        expect(reduce.bind([1], 3)).to.not.throw();
-        expect(reduce.bind([1], 'Test')).to.not.throw();
+        expect(() => reduce('Hello', Boolean)).to.not.throw();
+        expect(() => reduce(13, Boolean)).to.not.throw();
+        expect(() => reduce(null, Boolean)).to.not.throw();
+        expect(() => reduce(undefined, Boolean)).to.not.throw();
+        expect(() => reduce([1], null)).to.not.throw();
+        expect(() => reduce([1], undefined)).to.not.throw();
+        expect(() => reduce([1], 3)).to.not.throw();
+        expect(() => reduce([1], 'Test')).to.not.throw();
     });
 });

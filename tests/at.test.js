@@ -43,9 +43,9 @@ describe('At-function', () => {
     });
 
     test('Should handle invalid parameters without throwing', () => {
-        expect(at.bind(1, 'Test')).to.not.throw();
-        expect(at.bind('Hello', 2)).to.not.throw();
-        expect(at.bind(null, 'a')).to.not.throw();
-        expect(at.bind({ a: 123, b: 'Hello' }, undefined)).to.not.throw();
+        expect(() => at(1, 'Test')).to.not.throw();
+        expect(() => at('Hello', 2)).to.not.throw();
+        expect(() => at(null, 'a')).to.not.throw();
+        expect(() => at({ a: 123, b: 'Hello' }, undefined)).to.not.throw();
     });
 });

@@ -30,21 +30,21 @@ describe('clamp-function', () => {
 
     describe('Should handle invalid parameters in a consistent way', () => {
         test('Null should not throw', () => {
-            expect(clamp.bind(-4, -2, null)).to.not.throw();
-            expect(clamp.bind(-4, null, 5)).to.not.throw();
-            expect(clamp.bind(null, -2, 5)).to.not.throw();
+            expect(() => clamp(-4, -2, null)).to.not.throw();
+            expect(() => clamp(-4, null, 5)).to.not.throw();
+            expect(() => clamp(null, -2, 5)).to.not.throw();
         });
 
         test('Undefined should not throw', () => {
-            expect(clamp.bind(-4, -2, undefined)).to.not.throw();
-            expect(clamp.bind(-4, undefined, 5)).to.not.throw();
-            expect(clamp.bind(undefined, -2, 5)).to.not.throw();
+            expect(() => clamp(-4, -2, undefined)).to.not.throw();
+            expect(() => clamp(-4, undefined, 5)).to.not.throw();
+            expect(() => clamp(undefined, -2, 5)).to.not.throw();
         });
 
         test('Other wrong types of parameters should not throw', () => {
-            expect(clamp.bind('Test', -2, 2)).to.not.throw();
-            expect(clamp.bind(3, [2], 2)).to.not.throw();
-            expect(clamp.bind(-4, -2, { a: 3 })).to.not.throw();
+            expect(() => clamp('Test', -2, 2)).to.not.throw();
+            expect(() => clamp(3, [2], 2)).to.not.throw();
+            expect(() => clamp(-4, -2, { a: 3 })).to.not.throw();
         });
     });
 });

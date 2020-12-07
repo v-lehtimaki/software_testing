@@ -17,11 +17,11 @@ describe('toInteger-function', () => {
     });
 
     test('Should handle invalid parameters without throwing', () => {
-        expect(toInteger.bind('Hello')).to.not.throw();
-        expect(toInteger.bind([123])).to.not.throw();
-        expect(toInteger.bind({ a: 234 })).to.not.throw();
-        expect(toInteger.bind(NaN)).to.not.throw();
-        expect(toInteger.bind(null)).to.not.throw();
-        expect(toInteger.bind(undefined)).to.not.throw();
+        expect(() => toInteger('Hello')).to.not.throw();
+        expect(() => toInteger([123])).to.not.throw();
+        expect(() => toInteger({ a: 234 })).to.not.throw();
+        expect(() => toInteger(NaN)).to.not.throw();
+        expect(() => toInteger(null)).to.not.throw();
+        expect(() => toInteger(undefined)).to.not.throw();
     });
 });

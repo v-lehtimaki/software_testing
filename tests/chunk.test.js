@@ -22,9 +22,9 @@ describe('chunk-function', () => {
     });
 
     test('Should handle invalid parameters without throwing', () => {
-        expect(chunk.bind({ a: 'Test', b: 3 }, 0)).to.not.throw();
-        expect(chunk.bind([1, 2, 3, 4, 5], 'Hello')).to.not.throw();
-        expect(chunk.bind([1, 2, 3, 4, 5], null)).to.not.throw();
-        expect(chunk.bind(undefined, 5)).to.not.throw();
+        expect(() => chunk({ a: 'Test', b: 3 }, 0)).to.not.throw();
+        expect(() => chunk([1, 2, 3, 4, 5], 'Hello')).to.not.throw();
+        expect(() => chunk([1, 2, 3, 4, 5], null)).to.not.throw();
+        expect(() => chunk(undefined, 5)).to.not.throw();
     });
 });

@@ -21,11 +21,11 @@ describe('every-function', () => {
     });
 
     test('Should not throw with invalid parameters', () => {
-        expect(every.bind(123, Boolean)).to.throw();
-        expect(every.bind({ a: 'Hello' }, Boolean)).to.throw();
-        expect(every.bind(['1', '2', '3'], 'Hello')).to.throw();
-        expect(every.bind(null, Boolean)).to.throw();
-        expect(every.bind(NaN, Boolean)).to.throw();
-        expect(every.bind(undefined, Boolean)).to.throw();
+        expect(() => every(123, Boolean)).to.throw();
+        expect(() => every({ a: 'Hello' }, Boolean)).to.throw();
+        expect(() => every(['1', '2', '3'], 'Hello')).to.throw();
+        expect(() => every(null, Boolean)).to.throw();
+        expect(() => every(NaN, Boolean)).to.throw();
+        expect(() => every(undefined, Boolean)).to.throw();
     });
 });

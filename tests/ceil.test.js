@@ -19,9 +19,9 @@ describe('ceil-function', () => {
     });
 
     test('Should handle invalid parameters without throwing', () => {
-        expect(ceil.bind('Hello')).to.not.throw();
-        expect(ceil.bind([123])).to.not.throw();
-        expect(ceil.bind(null)).to.not.throw();
-        expect(ceil.bind(undefined)).to.not.throw();
+        expect(() => ceil('Hello')).to.not.throw();
+        expect(() => ceil([123])).to.not.throw();
+        expect(() => ceil(null)).to.not.throw();
+        expect(() => ceil(undefined)).to.not.throw();
     });
 });

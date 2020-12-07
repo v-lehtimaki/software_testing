@@ -68,9 +68,9 @@ describe('get-function', () => {
     });
 
     test('Should handle invalid parameters without throwing', () => {
-        expect(get.bind(1, 'Test')).to.not.throw();
-        expect(get.bind('Hello', 2)).to.not.throw();
-        expect(get.bind(null, 'a')).to.not.throw();
-        expect(get.bind({ a: 123, b: 'Hello' }, undefined)).to.not.throw();
+        expect(() => get(1, 'Test')).to.not.throw();
+        expect(() => get('Hello', 2)).to.not.throw();
+        expect(() => get(null, 'a')).to.not.throw();
+        expect(() => get({ a: 123, b: 'Hello' }, undefined)).to.not.throw();
     });
 });

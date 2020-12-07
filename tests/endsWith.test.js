@@ -41,15 +41,15 @@ describe('endsWith-function', () => {
         });
 
         test('Invalid parameter types should throw', () => {
-            expect(endsWith.bind('Hello', 3)).to.throw();
-            expect(endsWith.bind('Hello', null)).to.throw();
-            expect(endsWith.bind('Hello', undefined)).to.throw();
-            expect(endsWith.bind(3, 'Hello')).to.throw();
-            expect(endsWith.bind(null, 'Hello')).to.throw();
-            expect(endsWith.bind(undefined, 'Hello')).to.throw();
-            expect(endsWith.bind('Hello', 'llo', null)).to.throw();
-            expect(endsWith.bind('Hello', 'llo', NaN)).to.throw();
-            expect(endsWith.bind('Hello', 'llo', 'Hello')).to.throw();
+            expect(() => endsWith('Hello', 3)).to.throw();
+            expect(() => endsWith('Hello', null)).to.throw();
+            expect(() => endsWith('Hello', undefined)).to.throw();
+            expect(() => endsWith(3, 'Hello')).to.throw();
+            expect(() => endsWith(null, 'Hello')).to.throw();
+            expect(() => endsWith(undefined, 'Hello')).to.throw();
+            expect(() => endsWith('Hello', 'llo', null)).to.throw();
+            expect(() => endsWith('Hello', 'llo', NaN)).to.throw();
+            expect(() => endsWith('Hello', 'llo', 'Hello')).to.throw();
         });
     });
 });

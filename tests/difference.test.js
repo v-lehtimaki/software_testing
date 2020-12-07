@@ -33,10 +33,10 @@ describe('difference-function', () => {
     });
 
     test('Should not throw with invalid parameters', () => {
-        expect(difference.bind('Hello', [1, 2])).to.not.throw();
-        expect(difference.bind([1, 2], 'Hello')).to.not.throw();
-        expect(difference.bind(null, [1, 2])).to.not.throw();
-        expect(difference.bind([1, 2], NaN)).to.not.throw();
-        expect(difference.bind(undefined, [1, 2])).to.not.throw();
+        expect(() => difference('Hello', [1, 2])).to.not.throw();
+        expect(() => difference([1, 2], 'Hello')).to.not.throw();
+        expect(() => difference(null, [1, 2])).to.not.throw();
+        expect(() => difference([1, 2], NaN)).to.not.throw();
+        expect(() => difference(undefined, [1, 2])).to.not.throw();
     });
 });
