@@ -4,11 +4,11 @@ import clamp from '../course_code/src/clamp';
 const expect = chai.expect;
 
 describe('clamp-function', () => {
-    describe('Should not touch the value within the range', () => {
+    test('Should not touch the value within the range', () => {
         expect(clamp(2.2, -5, 5.5)).to.equal(2.2);
     });
 
-    describe('Should not touch the value if its equal to the maximum', () => {
+    test('Should not touch the value if its equal to the maximum', () => {
         expect(clamp(5.5, -5, 5.5)).to.equal(5.5);
     });
 
