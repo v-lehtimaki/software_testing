@@ -44,13 +44,13 @@ describe('countBy-function', () => {
     });
 
     test('Should handle invalid arrays without throwing', () => {
-        expect(countBy.bind('Test', () => true)).to.not.throw();
-        expect(countBy.bind(null, () => true)).to.not.throw();
-        expect(countBy.bind(undefined, () => true)).to.not.throw();
+        expect(() => countBy('Test', () => true)).to.not.throw();
+        expect(() => countBy(null, () => true)).to.not.throw();
+        expect(() => countBy(undefined, () => true)).to.not.throw();
     });
 
     test('Should handle invalid iteratee function by throwing', () => {
-        expect(countBy.bind([{ isTrue: true }, { isTrue: true }], 'a')).to.throw();
-        expect(countBy.bind([{ isTrue: true }, { isTrue: true }], null)).to.throw();
+        expect(() => countBy([{ isTrue: true }, { isTrue: true }], 'a')).to.throw();
+        expect(() => countBy([{ isTrue: true }, { isTrue: true }], null)).to.throw();
     });
 });

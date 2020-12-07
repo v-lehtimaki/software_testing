@@ -20,13 +20,13 @@ describe('map-function', () => {
     });
 
     test('Should not throw for invalid parameters', () => {
-        expect(map.bind('Hello', () => 1)).to.not.throw();
-        expect(map.bind(null, () => 1)).to.not.throw();
-        expect(map.bind(undefined, () => 1)).to.not.throw();
-        expect(map.bind(133, () => 1)).to.not.throw();
-        expect(map.bind({ a: 1 }, () => 1)).to.not.throw();
-        expect(map.bind([1, 2], 'Hello')).to.not.throw();
-        expect(map.bind([1, 2], null)).to.not.throw();
-        expect(map.bind([1, 2], undefined)).to.not.throw();
+        expect(() => map('Hello', () => 1)).to.not.throw();
+        expect(() => map(null, () => 1)).to.not.throw();
+        expect(() => map(undefined, () => 1)).to.not.throw();
+        expect(() => map(133, () => 1)).to.not.throw();
+        expect(() => map({ a: 1 }, () => 1)).to.not.throw();
+        expect(() => map([1, 2], 'Hello')).to.not.throw();
+        expect(() => map([1, 2], null)).to.not.throw();
+        expect(() => map([1, 2], undefined)).to.not.throw();
     });
 });

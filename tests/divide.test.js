@@ -13,9 +13,9 @@ describe('divide-function', () => {
     });
 
     test("Should not throw with invalid parameters", () => {
-        expect(divide.bind(10, null)).to.not.throw();
-        expect(divide.bind(undefined, 3)).to.not.throw();
-        expect(divide.bind([1, 2], 3)).to.not.throw();
-        expect(divide.bind(3, "Hello")).to.not.throw();
+        expect(() => divide(10, null)).to.not.throw();
+        expect(() => divide(undefined, 3)).to.not.throw();
+        expect(() => divide([1, 2], 3)).to.not.throw();
+        expect(() => divide(3, "Hello")).to.not.throw();
     })
 });

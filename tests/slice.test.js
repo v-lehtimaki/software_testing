@@ -36,12 +36,12 @@ describe('slice-function', () => {
     });
 
     test('Should not throw with invalid parameters', () => {
-        expect(slice.bind({ a: 1 }, 1, 2)).to.not.throw();
-        expect(slice.bind(null, 1, 2)).to.not.throw();
-        expect(slice.bind(undefined, 1, 2)).to.not.throw();
-        expect(slice.bind('Hello', 1, 2)).to.not.throw();
-        expect(slice.bind([1], null, 2)).to.not.throw();
-        expect(slice.bind([1], 1, null)).to.not.throw();
-        expect(slice.bind([1], 'Hello', 2)).to.not.throw();
+        expect(() => slice({ a: 1 }, 1, 2)).to.not.throw();
+        expect(() => slice(null, 1, 2)).to.not.throw();
+        expect(() => slice(undefined, 1, 2)).to.not.throw();
+        expect(() => slice('Hello', 1, 2)).to.not.throw();
+        expect(() => slice([1], null, 2)).to.not.throw();
+        expect(() => slice([1], 1, null)).to.not.throw();
+        expect(() => slice([1], 'Hello', 2)).to.not.throw();
     });
 });

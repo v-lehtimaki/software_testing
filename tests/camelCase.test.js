@@ -23,9 +23,9 @@ describe('camelCase-function', () => {
     });
 
     test('Should handle invalid parameters without throwing', () => {
-        expect(camelCase.bind(123)).to.not.throw();
-        expect(camelCase.bind(null)).to.not.throw();
-        expect(camelCase.bind(undefined)).to.not.throw();
-        expect(camelCase.bind(['Hello', 'World'])).to.not.throw();
+        expect(() => camelCase(123)).to.not.throw();
+        expect(() => camelCase(null)).to.not.throw();
+        expect(() => camelCase(undefined)).to.not.throw();
+        expect(() => camelCase(['Hello', 'World'])).to.not.throw();
     });
 });

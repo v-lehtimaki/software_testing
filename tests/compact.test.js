@@ -11,10 +11,10 @@ describe('compact-function', () => {
     });
 
     test('Should handle invalid parameters by throwing', () => {
-        expect(compact.bind(null)).to.throw();
-        expect(compact.bind(undefined)).to.throw();
-        expect(compact.bind('Test')).to.throw();
-        expect(compact.bind(3)).to.throw();
-        expect(compact.bind({ a: 'Test', b: 1 })).to.throw();
+        expect(() => compact(null)).to.throw();
+        expect(() => compact(undefined)).to.throw();
+        expect(() => compact('Test')).to.throw();
+        expect(() => compact(3)).to.throw();
+        expect(() => compact({ a: 'Test', b: 1 })).to.throw();
     });
 });

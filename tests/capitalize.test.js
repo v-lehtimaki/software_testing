@@ -15,9 +15,9 @@ describe('capitalize-function', () => {
     });
 
     test('Should handle invalid parameters without throwing', () => {
-        expect(capitalize.bind(123)).to.not.throw();
-        expect(capitalize.bind(['Hello'])).to.not.throw();
-        expect(capitalize.bind(null)).to.not.throw();
-        expect(capitalize.bind(undefined)).to.not.throw();
+        expect(() => capitalize(123)).to.not.throw();
+        expect(() => capitalize(['Hello'])).to.not.throw();
+        expect(() => capitalize(null)).to.not.throw();
+        expect(() => capitalize(undefined)).to.not.throw();
     });
 });
