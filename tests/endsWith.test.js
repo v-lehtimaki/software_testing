@@ -36,8 +36,8 @@ describe('endsWith-function', () => {
 
     describe('Should handle invalid parameters in a consistent way', () => {
         test('Invalid positions should not throw', () => {
-            expect(endsWith.bind('Hello', 'H', 10)).to.not.throw();
-            expect(endsWith.bind('Hello', 'H', -10)).to.not.throw();
+            expect(() => endsWith('Hello', 'H', 10)).to.not.throw();
+            expect(() => endsWith('Hello', 'H', -10)).to.not.throw();
         });
 
         test('Invalid parameter types should throw', () => {
